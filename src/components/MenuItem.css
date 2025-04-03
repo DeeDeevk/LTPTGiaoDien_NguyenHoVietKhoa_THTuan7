@@ -1,0 +1,20 @@
+.menu-item{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #565e6c;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.menu-item:hover{
+    color: black;
+}
+
+.menu-item img{
+    width: 20px;
+    height: 20px;
+}

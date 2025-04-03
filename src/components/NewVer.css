@@ -1,0 +1,22 @@
+.avai{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: #eff6ff;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.avai > img {
+    padding-top: 10px;
+}
+
+.avai > button{
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: solid #82a1c5;
+    color: #82a1c5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
