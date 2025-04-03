@@ -1,0 +1,43 @@
+.container{
+    padding: 0 20px 0 20px;
+    display: grid;
+    grid-template-areas: 
+        "menu header"
+        "menu content"
+        "menu content";
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+}
+
+.header{
+    height: 10vh;
+    grid-auto-rows: minmax();
+    grid-area: header;
+    background-color: aqua;
+}
+
+.menu{
+    grid-area: menu;
+    background-color: brown;
+    display: flex;
+}
+
+.content{
+    height: 90vh;
+    grid-area: content;
+    background-color: chocolate;
+}
+
+.image{
+    background-color: beige;
+    width: 100%;
+    height: 10vh;
+}
+
+.image > img{
+    width: 55%;
+    margin: 5px 0 0 10px;
+}
+
+
+
