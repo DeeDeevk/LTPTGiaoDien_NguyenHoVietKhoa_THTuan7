@@ -1,0 +1,46 @@
+.cardName{
+    height: 20vh;
+    border: 1px solid;
+    width: 320px;
+    margin: 0 35px 0 35px;
+    border: none;
+    border-radius: 10px;
+}
+
+.r1{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.title{
+    margin-left: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.imgLogo{
+    margin-left: auto;
+    width: 35px;
+    height: 35px;
+    padding-right: 10px;
+}
+
+.value{
+    margin-left: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10px;
+}
+
+.per{
+    margin-left: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: grey;
+}
+
+.phanTram{
+    color: green;
+}
+

@@ -1,8 +1,9 @@
 .ovrView{
     width: 100%;
     height: 30vh;
-    background-color: aquamarine;
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .DReport{
@@ -11,15 +12,29 @@
     background-color: blueviolet;
 }
 
+.ovr_gr{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
 .ovr_gr > img{
     margin: 10px 10px 10px 30px;
 
 }
 
 .ovr_gr > span{
-    position: absolute;
-    top: 95px;
+    gap: 20px;
     font-size: 20px;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.ovr_card{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }

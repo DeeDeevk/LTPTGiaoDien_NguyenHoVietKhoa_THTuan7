@@ -5,7 +5,10 @@ import NewVer from '../NewVer';
 import Header from '../Header';
 import Content from '../Content';
 import gr from '../../assets/Group.png'
+import '../service/ContactService'
+
 function Admin() {
+
     return ( 
         <div className='container'>
             <div className="header">
