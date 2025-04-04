@@ -13,31 +13,33 @@
     height: 10vh;
     grid-auto-rows: minmax();
     grid-area: header;
-    background-color: aqua;
+    border: 1px solid grey;
 }
 
 .menu{
     grid-area: menu;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
 }
 
 .content{
     height: 90vh;
     grid-area: content;
     background-color: chocolate;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
 }
 
 .image{
-    width: 100%;
+    width: 90%;
+    margin: auto;
     height: 10vh;
 }
 
 .image > img{
-    position: absolute;
-    top: 20px;
-    left: 60px;
-    width: 106px;
-    height: 36px;
-    border-radius: 6px;
+    margin: 20px 20px 20px 20px;
 }
 
 .menuItems{
