@@ -4,7 +4,9 @@ import square_four from '../assets/Squares four 1.png'
 import button1509 from '../assets/Button 1509.png'
 import button1530 from '../assets/Button 1530.png'
 import button1529 from '../assets/Button 1529.png'
+import fileTxt from '../assets/File text 1.png'
 import Card from './Card';
+import TableDT from './TableDT'
 import { getCustomerAPI } from './service/ContactService';
 
 function Content() {
@@ -64,7 +66,19 @@ function Content() {
                 </div>
             </div>
             <div className='DReport'>
-
+                <div className='dr_gr'>
+                    <img src={fileTxt} alt="Square four" />
+                    <span>Detiled report</span>
+                    <div className='btnAll'>
+                        <button className='btnIm'>Import</button>
+                        <button className='btnEx'>Export</button>
+                    </div>
+                </div>
+                <div className='tbl'>
+                    <TableDT
+                        db = {data}
+                    />
+                </div>
             </div>
         </div>
     );

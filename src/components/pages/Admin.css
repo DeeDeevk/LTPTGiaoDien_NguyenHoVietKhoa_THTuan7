@@ -6,7 +6,7 @@
         "menu content"
         "menu content";
     grid-template-columns: 1fr 4fr;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .header{
@@ -24,7 +24,7 @@
 }
 
 .content{
-    height: 90vh;
+    height: 100vh;
     grid-area: content;
     border-left: 1px solid grey;
     border-bottom: 1px solid grey;
@@ -58,6 +58,10 @@
     border: hidden;
     background-color: #f44b87;
     cursor: pointer;
+}
+
+.menuItems > button:hover{
+    opacity: calc(0.75);
 }
 
 .newVer{
