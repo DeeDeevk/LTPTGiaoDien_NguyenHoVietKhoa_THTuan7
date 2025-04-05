@@ -8,11 +8,11 @@ import code from '../assets/Code.png'
 function Sidebar() {
     return ( 
         <div className="sidebar">
-            <MenuItem icon={folder} text="Projects"/>
-            <MenuItem icon={group} text="Teams"/>
-            <MenuItem icon={pie} text="Analytics"/>
-            <MenuItem icon={chat} text="Messages"/>
-            <MenuItem icon={code} text="Itegrations"/>    
+            <MenuItem icon={folder} text="Projects" to='/'/>
+            <MenuItem icon={group} text="Teams" to='/team'/>
+            <MenuItem icon={pie} text="Analytics" to='/analytics'/>
+            <MenuItem icon={chat} text="Messages" to='/messages' />
+            <MenuItem icon={code} text="Itegrations" to='/itegration'/>    
         </div>
     );
 }

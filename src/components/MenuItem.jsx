@@ -1,10 +1,11 @@
-import './MenuItem.css'
-function MenuItem({icon, text}) {
+import './MenuItem.css';
+import {Link} from 'react-router-dom';
+function MenuItem({icon, text, to}) {
     return ( 
-        <div className="menu-item">
+        <Link to={to} className="menu-item">
             <img src={icon} alt={text} />
             <span>{text}</span>
-        </div>
+        </Link>
      );
 }
 
