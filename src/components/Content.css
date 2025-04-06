@@ -64,6 +64,20 @@
     align-items: center;
 }
 
+.btnAdd{
+    margin-left: 20px;
+    padding: 10px 30px 10px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    background-color: #f44b87;
+    border: none;
+}
+
+.btnAdd:hover{
+    opacity: calc(0.75);
+}
+
 .btnIm{
     margin-left: 20px;
     padding: 10px 10px 10px 30px;

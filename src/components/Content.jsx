@@ -70,6 +70,7 @@ function Content() {
                     <img src={fileTxt} alt="Square four" />
                     <span>Detiled report</span>
                     <div className='btnAll'>
+                        <button className='btnAdd'>Add</button>
                         <button className='btnIm'>Import</button>
                         <button className='btnEx'>Export</button>
                     </div>
