@@ -1,0 +1,70 @@
+.ac{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.modalAdd{
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+.formAdd{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lblAdd{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.lblAdd > label{
+    padding: 5px;
+    margin: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+.inpAdd{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inpAdd > input{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.btnAllOfModalAdd{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btnAddModal{
+    padding: 10px 20px 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #f44b87;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btnCloseAdd{
+    padding: 10px 20px 10px 20px;
+    color: #f44b87;
+    background-color: white;
+    border: 1px solid #f44b87;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 5px;
+
+}

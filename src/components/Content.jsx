@@ -7,6 +7,8 @@ import button1529 from '../assets/Button 1529.png'
 import fileTxt from '../assets/File text 1.png'
 import Card from './Card';
 import TableDT from './TableDT'
+import ModalUpdate from './ModalUpdate'
+import ModalAdd from './ModalAdd';
 import { getCustomerAPI } from './service/ContactService';
 
 function Content() {
@@ -16,6 +18,9 @@ function Content() {
     const [totalOrderValue, setTotalOrderValue] = useState(0);
     const [totalProfit, setTotalProfit] = useState(0);
     const [totalCustomer, setTotalCustomer] = useState(0);
+    const [showModalUpdate, setShowModalUpdate] = useState(false);
+    const [showModalAdd, setShowModalAdd] = useState(false);
+    const [selectRow, setSelectRow] = useState(null);
 
 
     useEffect(() => {
@@ -33,6 +38,13 @@ function Content() {
         fetchData();
     }, [reload]);
 
+
+    const handleEdit = (row) =>{
+        setSelectRow(row);
+        setShowModalUpdate(true);
+        console.log("id của dòng được chọn: ", row.id);
+        
+    } 
 
     return (
         <div>
@@ -70,14 +82,23 @@ function Content() {
                     <img src={fileTxt} alt="Square four" />
                     <span>Detiled report</span>
                     <div className='btnAll'>
-                        <button className='btnAdd'>Add</button>
+                        <button className='btnAdd' onClick={() => setShowModalAdd(true)}>Add</button>
+                        
                         <button className='btnIm'>Import</button>
                         <button className='btnEx'>Export</button>
                     </div>
+                    <ModalAdd isOpen={showModalAdd} onClose={() => setShowModalAdd(false)}/>
                 </div>
                 <div className='tbl'>
                     <TableDT
                         db = {data}
+                        onEdit = {handleEdit}
+                    />
+                    <ModalUpdate
+                        isOpen={showModalUpdate}
+                        onClose={() => setShowModalUpdate(false)}
+                        selectRow={selectRow}
+                        setReload={setReload}
                     />
                 </div>
             </div>

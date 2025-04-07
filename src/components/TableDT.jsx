@@ -1,8 +1,8 @@
 import DataTable from 'react-data-table-component'
 import './TableDT.css'
 import styled from 'styled-components';
-import create from '../assets/create.png'
-function TableDT({db}) {
+import edit from '../assets/create.png'
+function TableDT({db, onEdit}) {
 
     const columns = [
         {
@@ -75,7 +75,7 @@ function TableDT({db}) {
         },
         {
             name: '',
-            cell: () => <img src={create} alt="Create"/>,
+            cell: (row) => <img src={edit} alt="Edit" onClick={() => onEdit(row)}/>,
             button: "true",
             style:{
                 cursor: 'pointer'
@@ -87,7 +87,7 @@ function TableDT({db}) {
         headCells:{
             style:{
                 fontWeight:'bold',
-                fontFamily: 'sans-serif'
+                fontFamily: 'sans-serif',
             },
         },
         cells:{
