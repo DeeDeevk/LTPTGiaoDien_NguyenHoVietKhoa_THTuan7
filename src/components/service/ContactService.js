@@ -34,3 +34,23 @@ export const updateCustomerAPI = async(selectRow, newData) =>{
     }
 }
 
+export const createCustomerAPI = async(newCustomer) =>{
+    try {
+        const response = await fetch('https://67e3688c2ae442db76d000dd.mockapi.io/customer',{
+            method: 'POST',
+            headers:{
+                'Content-Type' : 'application/json',
+            },
+            body: JSON.stringify(newCustomer)
+        })
+        if(response.ok){
+            console.log("Created", await response.json());
+        }
+        else{
+            console.log('Create is failed');
+        }
+    } catch (error) {
+        console.error("lỗi create");
+        
+    }
+}

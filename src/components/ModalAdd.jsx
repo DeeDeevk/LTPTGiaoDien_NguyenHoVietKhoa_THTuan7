@@ -1,6 +1,7 @@
+import { useEffect, useRef, useState } from 'react';
+import { createCustomerAPI } from '../components/service/ContactService.js'
 import ReactDOM from 'react-dom'
 import './ModalAdd.css';
-import { useEffect, useRef } from 'react';
 
 
 const styles = {
@@ -25,16 +26,37 @@ const styles = {
 } 
 
 
-function ModalAdd({isOpen, onClose}) {
+function ModalAdd({isOpen, onClose, setReload}) {
+    const [newCustomer, setNewCustomer] = useState({
+        customerName: '',
+        company: '',
+        orderValue: '',
+        orderDay: '',
+        profit: '',
+        status: 'New'
+    })
     const cusNameAdd = useRef();
     
     useEffect(() => {
         if(isOpen && cusNameAdd.current){
             cusNameAdd.current.focus();
         }
-    })
+    }, [isOpen])
 
     if(!isOpen) return null;
+
+    const handleAdd = async() =>{
+        const orderDay = new Date();
+        const profit = parseFloat(newCustomer.orderValue * 0.01);
+        const customer = {...newCustomer,
+            orderDay: orderDay,
+            profit: profit
+        };
+        await createCustomerAPI(customer);
+        setReload(prev => !prev);
+        onClose();
+    }
+
 
     return ReactDOM.createPortal ( 
         <div style={styles.overlay}>
@@ -47,13 +69,13 @@ function ModalAdd({isOpen, onClose}) {
                         <label htmlFor="addValue">Order value: </label>
                     </div>
                     <div className='inpAdd'>
-                        <input type="text" id='addCusName' ref={cusNameAdd}/>
-                        <input type="text" id='addCompany' />
-                        <input type="text" id='addValue'/>
+                        <input type="text" id='addCusName' ref={cusNameAdd} onChange={(e) => setNewCustomer({...newCustomer, customerName: e.target.value})}/>
+                        <input type="text" id='addCompany' onChange={(e) => setNewCustomer({...newCustomer, company: e.target.value})} />
+                        <input type="text" id='addValue' onChange={(e) => setNewCustomer({...newCustomer, orderValue: e.target.value})}/>
                     </div>
                 </div>
                 <div className='btnAllOfModalAdd'>
-                        <button className='btnAddModal'>Add</button>
+                        <button className='btnAddModal' onClick={handleAdd}>Add</button>
                         <button className='btnCloseAdd' onClick={onClose}>Close</button>
                 </div>
             </div>

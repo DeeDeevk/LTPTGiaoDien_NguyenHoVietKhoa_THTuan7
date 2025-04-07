@@ -87,7 +87,11 @@ function Content() {
                         <button className='btnIm'>Import</button>
                         <button className='btnEx'>Export</button>
                     </div>
-                    <ModalAdd isOpen={showModalAdd} onClose={() => setShowModalAdd(false)}/>
+                    <ModalAdd 
+                        isOpen={showModalAdd} 
+                        onClose={() => setShowModalAdd(false)}
+                        setReload={setReload}    
+                    />
                 </div>
                 <div className='tbl'>
                     <TableDT
