@@ -109,7 +109,7 @@ function TableDT({db, onEdit}) {
                 selectableRows
                 customStyles={customStyles}
                 fixedHeader
-                fixedHeaderScrollHeight="550px"
+                fixedHeaderScrollHeight="350px"
             />
         </div>
      );
